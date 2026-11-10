@@ -1,55 +1,184 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Personal Profile Form</title>
+    <title>Personal Profile Registration</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
             margin: 0;
-            padding: 30px;
+            padding: 35px 20px;
+            font-family: Arial, sans-serif;
+
+            /* Study desk background image */
+            background-image: url("image/study-desk-background.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
+            min-height: 100vh;
         }
 
+        /* Main container */
         .container {
-            background-color: white;
-            width: 450px;
-            margin: auto;
-            padding: 25px;
-            border-radius: 10px;
+            max-width: 850px;
+            margin: 20px auto;
+            background: rgba(255, 255, 255, 0.94);
+            border: 3px solid #f3a6c6;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(100, 60, 100, 0.20);
         }
 
-        h2 {
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #f58db8, #d9a5e8);
             text-align: center;
-            color: #333333;
+            padding: 30px 15px;
+            color: white;
         }
 
-        label {
-            display: block;
-            margin-top: 15px;
+        .header .icon {
+            font-size: 40px;
+            margin-bottom: 5px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 30px;
+            font-family: Georgia, serif;
+        }
+
+        .header p {
+            display: inline-block;
+            background: #fff0c9;
+            color: #70445c;
+            padding: 10px 25px;
+            border-radius: 30px;
+            margin: 18px 0 0;
+            font-size: 15px;
+        }
+
+        /* Form section */
+        .form-content {
+            padding: 30px 40px;
+        }
+
+        .form-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            gap: 15px;
+        }
+
+        .form-row label {
+            width: 220px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #603c58;
+            flex-shrink: 0;
+        }
+
+        .form-row .field {
+            flex: 1;
         }
 
         input, textarea {
             width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            box-sizing: border-box;
+            padding: 13px 15px;
+            border: 2px solid #e6a4c2;
+            border-radius: 12px;
+            background: #fffafd;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+            outline: none;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #a98bd6;
+            box-shadow: 0 0 5px rgba(169, 139, 214, 0.3);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 110px;
+        }
+
+        input::placeholder, textarea::placeholder {
+            color: #999;
+        }
+
+        /* Submit button */
+        .button-area {
+            text-align: center;
+            margin-top: 30px;
         }
 
         button {
-            width: 100%;
-            padding: 12px;
-            margin-top: 20px;
-            background-color: #4CAF50;
-            color: white;
+            width: 60%;
+            padding: 15px;
             border: none;
+            border-radius: 30px;
+            background: linear-gradient(135deg, #f18ab5, #c47bc9);
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
             cursor: pointer;
+            transition: 0.3s;
         }
 
         button:hover {
-            background-color: #45a049;
+            background: linear-gradient(135deg, #dc679b, #a76ab9);
+            transform: translateY(-2px);
         }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 18px;
+            background: #f8eafa;
+            color: #76516f;
+            font-size: 13px;
+        }
+
+        /* Responsive design */
+        @media screen and (max-width: 650px) {
+
+            body {
+                padding: 15px 10px;
+                background-attachment: scroll;
+            }
+
+            .form-content {
+                padding: 25px 20px;
+            }
+
+            .form-row {
+                display: block;
+            }
+
+            .form-row label {
+                display: block;
+                width: 100%;
+                margin-bottom: 8px;
+            }
+
+            .header h1 {
+                font-size: 23px;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+
     </style>
 </head>
 
@@ -57,31 +186,127 @@
 
     <div class="container">
 
-        <h2>Personal Profile Form</h2>
+        <!-- Website Header -->
+        <div class="header">
 
-        <form action="ProfileServlet" method="post">
+            <div class="icon">🎓</div>
 
-            <label>Name:</label>
-            <input type="text" name="name" required>
+            <h1>Personal Profile Registration</h1>
 
-            <label>Student ID:</label>
-            <input type="text" name="studentID" required>
+            <p>
+                ✨ Please fill in your personal information below ✨
+            </p>
 
-            <label>Programme:</label>
-            <input type="text" name="programme" required>
+        </div>
 
-            <label>Email:</label>
-            <input type="email" name="email" required>
+        <!-- Registration Form -->
+        <div class="form-content">
 
-            <label>Hobbies:</label>
-            <input type="text" name="hobbies" required>
+            <form action="ProfileServlet" method="post">
 
-            <label>Short Self-Introduction:</label>
-            <textarea name="introduction" rows="4" required></textarea>
+                <div class="form-row">
 
-            <button type="submit">Submit Profile</button>
+                    <label>👤 Name :</label>
 
-        </form>
+                    <div class="field">
+                        <input type="text"
+                               name="name"
+                               placeholder="Enter your full name"
+                               required>
+                    </div>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <label>🪪 Student ID :</label>
+
+                    <div class="field">
+                        <input type="text"
+                               name="studentID"
+                               placeholder="Enter your student ID"
+                               required>
+                    </div>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <label>🎓 Programme :</label>
+
+                    <div class="field">
+                        <input type="text"
+                               name="programme"
+                               placeholder="Enter your programme"
+                               required>
+                    </div>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <label>✉️ Email :</label>
+
+                    <div class="field">
+                        <input type="email"
+                               name="email"
+                               placeholder="Enter your email"
+                               required>
+                    </div>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <label>💗 Hobbies :</label>
+
+                    <div class="field">
+                        <input type="text"
+                               name="hobbies"
+                               placeholder="Enter your hobbies"
+                               required>
+                    </div>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <label>📝 Short Self-Introduction :</label>
+
+                    <div class="field">
+                        <textarea name="introduction"
+                                  rows="5"
+                                  placeholder="Tell us a little about yourself"
+                                  required></textarea>
+                    </div>
+
+                </div>
+
+
+                <!-- Submit Button -->
+                <div class="button-area">
+
+                    <button type="submit">
+                        ✈ Submit Profile
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+
+            🌸 Personal Profile Web Application | CSC584 🌸
+
+        </div>
 
     </div>
 
