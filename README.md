@@ -3,14 +3,17 @@
 
 ### 1. Project Description
 
-This project is a simple Personal Profile Web Application developed for CSC584 Individual Assignment 1. The application allows users to enter their personal information through an HTML form. After submitting the form, the Java Servlet receives and processes the information before sending it to a JSP page to display the user's personal profile.
+This application is developed using HTML, Java Servlet and JavaServer Pages (JSP). HTML is used to create the registration form where students can enter their name, student ID, programme, email, hobbies and short self-introduction. The submitted information is sent to the Java Servlet using the HTTP POST method. The Servlet will receive and process the information before passing it to the JSP page.
+The JSP page is used to display all the information entered by the student in an organized way. CSS is also applied to make the website look more attractive, neat and easy to use. The website uses a cheerful pastel study theme with pink, lavender and other soft colours, together with a study desk background image.
+Through this project, I can understand how HTML forms, Java Servlet and JSP work together to develop a simple web application. I also learn how to collect information from users, process the information and display it on a webpage.
 
 ### 2. Project Objectives
 
-- To create an HTML form for collecting personal information.
-- To use Java Servlet to receive and process form information.
-- To use JSP to display the submitted personal information.
-- To apply CSS to make the application interface more attractive and readable.
+- To develop a simple web application that allows students to enter their personal information through an online registration form.
+- To understand how HTML is used to create a form with different input fields such as name, student ID, programme, email, hobbies and short self-introduction.
+- To learn how Java Servlet receives and processes information submitted from an HTML form using the HTTP POST method.
+- To understand how JSP is used to display the submitted personal information on a webpage.
+
 
 ### 3. Technologies Used
 
@@ -35,10 +38,15 @@ The application collects the following information:
 
 ### 5. Project Structure
 
-- `index.html` – Displays the personal profile form.
-- `ProfileServlet.java` – Receives and processes the submitted information.
-- `profile.jsp` – Displays the submitted personal profile.
-- `README.md` – Provides information about the project.
+The project contains the following main files and folders:
+src/ – Contains the Java source code, including the ProfileServlet class.
+web/ – Contains the HTML page, JSP page and website resources.
+web/index.html – Displays the personal profile registration form.
+web/profile.jsp – Displays the submitted personal profile.
+web/image/ – Stores the study desk background image.
+nbproject/ – Contains NetBeans project configuration files.
+screenshots/ – Stores screenshots of the registration form and submitted profile.
+README.md – Provides information about the project.
 
 ### 6. How to Run the Application
 
@@ -53,4 +61,6 @@ The application collects the following information:
 
 ### 7. Conclusion
 
-This project demonstrates how HTML, Java Servlet and JSP work together to develop a simple Personal Profile Web Application. Users can submit their personal information through an HTML form, and the submitted information will be processed by the Servlet and displayed on a JSP page.
+In conclusion, the Personal Profile Web Application has been successfully developed using HTML, CSS, Java Servlet and JavaServer Pages (JSP). The application allows students to enter their personal information through an online registration form. The submitted information is then received and processed by the Java Servlet before being displayed on the personal profile page using JSP.
+Throughout this project, I have gained more knowledge about how to develop a simple web application. I have learned how to create an HTML form, use different input fields, submit information using the HTTP POST method and retrieve the submitted values using Java Servlet. I also understand how JSP works together with Servlet to display information on a webpage.
+Furthermore, this project has helped me improve my programming skills and understand the connection between the front-end and back-end parts of a web application. I also gained experience in managing project files and uploading the completed project to GitHub.
