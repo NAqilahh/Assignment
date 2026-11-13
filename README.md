@@ -17,11 +17,6 @@ Through this project, I can understand how HTML forms, Java Servlet and JSP work
 
 ### 3. Technologies Used
 
-- HTML
-- CSS
-- Java
-- Java Servlet
-- JavaServer Pages (JSP)
 - NetBeans IDE 8.2
 - GlassFish Server
 
